@@ -1,20 +1,15 @@
 import React from 'react'
-import BG from '../global/BG'
+import Photo from "../../assets/photo/LOGO.png"
 
-function Home() {
+
+function BG() {
   return (
-    <>
-
     <div className='bgSplit'>
         <div className='container'>
           <img width={80} src={Photo} alt="Logo Alfaz" />
         </div>
     </div>
-    
-
-
-    </>
   )
 }
 
-export default Home
+export default BG
