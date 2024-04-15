@@ -1,8 +1,12 @@
 import React from 'react'
+import BG from '../Global/BG'
+
 
 function Home() {
   return (
-    <div>Hom</div>
+    <div className='relative'>
+      <BG />
+    </div>
   )
 }
 
