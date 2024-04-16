@@ -13,10 +13,10 @@ function Home() {
   const location = useLocation()
   const pageIndex = [
     '/',
-    '/about',
-    '/contact',
     '/mastery',
-    '/reviews'
+    '/projects',
+    '/testimonial',
+    '/connect'
   ]
 
   const [pathName, setPathName] = useState(location.pathname)
