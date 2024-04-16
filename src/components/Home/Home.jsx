@@ -1,12 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import BG from '../Global/BG'
 import Navbar from '../Global/Navbar'
 import Facebook from "../assets/icons/Facebook.png"
 import Github from "../assets/icons/Github.png"
 import Linkedin from "../assets/icons/Linkedin.png"
 import Gmail from "../assets/icons/Gmail.png"
+import paginationIcon from "../assets/icons/Polygon 1.png"
+import {Link} from "react-router-dom"
+import { useLocation } from 'react-router-dom'
 
 function Home() {
+  const location = useLocation()
+  const pageIndex = [
+    '/',
+    '/about',
+    '/contact',
+    '/mastery',
+    '/reviews'
+  ]
+
+  const [pathName, setPathName] = useState(location.pathname)
+
   return (
     <>
     <div className=''>
@@ -41,8 +55,15 @@ function Home() {
                 <img width={30} src={Github} alt="Github" />
             </div>
           </div>
+
+          <div className='icon-box absolute right-6 bottom-6'>
+            <div className='icons flex flex-col gap-4 items-center'>
+                {pageIndex.map((path, index)=>
+                path==pathName?<img width={25} src={paginationIcon} alt="paginationIcon" />:<div className='bg-white w-2 h-2'></div>
+                )}
+            </div>
+          </div>
         </div>
-          
       </div>
       
 </>
